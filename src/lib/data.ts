@@ -1,18 +1,21 @@
 import { MenuItem, Category } from "@/types";
+import Img from "../../public/images/ntsc.png";
+
+
 
 export const categories: Category[] = [
   { id: "1", name: "All", image: "/images/all.png", description: "" },
   {
     id: "2",
     name: "Breakfast",
-    image: "/images/breakfast.png",
+    image: Img,
     description: "",
   },
-  { id: "3", name: "Lunch", image: "/images/lunch.png", description: "" },
-  { id: "4", name: "Dinner", image: "/images/dinner.png", description: "" },
-  { id: "5", name: "Drinks", image: "/images/drinks.png", description: "" },
-  { id: "6", name: "Desserts", image: "/images/desserts.png", description: "" },
-  { id: "7", name: "Snacks", image: "/images/snacks.png", description: "" },
+  { id: "3", name: "Lunch", image: Img, description: "" },
+  { id: "4", name: "Dinner", image: Img, description: "" },
+  { id: "5", name: "Drinks", image: Img, description: "" },
+  { id: "6", name: "Desserts", image: Img, description: "" },
+  { id: "7", name: "Snacks", image: Img, description: "" },
   {
     id: "8",
     name: "Beverages",
