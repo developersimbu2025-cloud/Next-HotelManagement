@@ -2,8 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock, Star, Truck } from "lucide-react";
 import Button from "@/components/ui/button";
+import CategoryCard from "@/components/CategoryCard";
+import { categories, menuItems } from "@/lib/data";
+import MenuItemCard from "@/components/MenuItemCard";
 
 export default function Home() {
+  const FeaturedItems = menuItems.slice(0, 4);
+
   return (
     <div className=" min-h-screen ">
       {/* Hero Section */}
@@ -73,7 +78,27 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            Category
+            {categories.slice(1, 5).map((ele) => (
+              <CategoryCard key={ele.id} category={ele} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Items Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Featured Items
+            </h2>
+            <p className="text-gray-600 text-lg">Our most popular dishes</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {FeaturedItems.map((item) => (
+              <MenuItemCard key={item.id} item={item} />
+            ))}
           </div>
         </div>
       </section>
