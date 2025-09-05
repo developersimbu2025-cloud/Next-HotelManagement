@@ -1,8 +1,6 @@
 import { MenuItem, Category } from "@/types";
 import Img from "../../public/images/ntsc.png";
 
-
-
 export const categories: Category[] = [
   { id: "1", name: "All", image: "/images/all.png", description: "" },
   {
@@ -13,9 +11,9 @@ export const categories: Category[] = [
   },
   { id: "3", name: "Lunch", image: Img, description: "" },
   { id: "4", name: "Dinner", image: Img, description: "" },
-  { id: "5", name: "Drinks", image: Img, description: "" },
-  { id: "6", name: "Desserts", image: Img, description: "" },
-  { id: "7", name: "Snacks", image: Img, description: "" },
+
+  { id: "5", name: "Desserts", image: Img, description: "" },
+  { id: "6", name: "Snacks", image: Img, description: "" },
   {
     id: "8",
     name: "Beverages",
